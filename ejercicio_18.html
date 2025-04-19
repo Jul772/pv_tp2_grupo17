@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 18 sin módulos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    #miParrafo {
+      color: #333;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    #miBoton {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #miBoton:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejercicio 18</h2>
+  <p id="miParrafo">¿Cómo se accede al DOM?
+    En Javascript, la forma de acceder al DOM es a través de un objeto llamado document, que representa el árbol DOM de la página o pestaña del navegador donde nos encontramos. En su interior pueden existir varios tipos de elementos, pero principalmente serán element o node:
+    
+    element no es más que la representación genérica de una etiqueta: HTMLElement.
+    node es una unidad más básica, la cuál puede ser element o un nodo de texto.
+    document y window (padre de document) son objetos cuya interfaces son generalmente muy usadas en la programación de DOM. En término simple, el objeto window representa algo como podría ser el navegador, y el objeto document es la raíz del documento en sí. Element hereda de la interfaz genérica Node, y juntos, estas dos interfaces proporcionan muchos métodos y propiedades utilizables sobre los elementos individuales. Éstos elementos pueden igualmente tener interfaces específicas según el tipo de datos representados. Lo siguiente es una breve lista de los APIS comunes en la web y en las páginas escritas en XML utilizando el DOM, no es completa ni descriptiva.</p>
+  <button id="miBoton">Cambiar texto</button>
+
+  <script src="ejecicio_18.js"></script>
+</body>
+</html>

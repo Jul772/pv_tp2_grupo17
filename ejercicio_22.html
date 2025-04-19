@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Texto </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #mostrarTexto {
+      padding: 15px;
+      font-size: 1.1em;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .largo {
+      background-color: #ffb3b3 !important; /* rojo claro visible */
+    }
+  </style>
+</head>
+<body>
+  <h2>Escribí algo:</h2>
+  <input type="text" id="campoTexto" placeholder="Escribí acá...">
+  <div id="mostrarTexto">El texto aparecerá aquí</div>
+
+  <script>
+    const input = document.getElementById("campoTexto");
+    const salida = document.getElementById("mostrarTexto");
+
+    input.addEventListener("input", () => {
+      const valor = input.value;
+      salida.textContent = valor;
+
+      if (valor.length > 20) {
+        salida.classList.add("largo");
+      } else {
+        salida.classList.remove("largo");
+      }
+    });
+  </script>
+</body>
+</html>
+
