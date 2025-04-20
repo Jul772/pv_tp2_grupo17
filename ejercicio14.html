@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+    <script>
+        let numduplicar = prompt("Por favor, ingresar números separados por ' , ' (comas):").split(",").map(Number)
+        let resultado = numduplicar.map(function (num) {
+            return num * 2;
+        });
+        let resCad = resultado.join(",")
+        alert("Los números duplicados son: " + resCad);
+
+    </script>
+</head>
+
+<body style="background-color: #0F0F0F;">
+
+
+
+</body>
+
+</html>
