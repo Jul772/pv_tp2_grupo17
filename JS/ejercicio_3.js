@@ -5,6 +5,6 @@ const calcularAreaCirculo = () => {
     console.log(`El area del circulo con radio ${radio} es: ${area.toFixed(2)}`);
 };
 
-//nota: el area.toFixed(2) redondea el resultado a dos decimales para que sea más legible.
+//nota: el area.toFixed(2) redondea el resultado a dos decimales para que sea más legible y no todos los decimales.
 // invocamos
 calcularAreaCirculo();
