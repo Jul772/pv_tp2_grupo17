@@ -9,7 +9,7 @@ function sincronizarSelects(origenSelect, destinoSelect) {
         if (option.value == origen.value) {
             destino.text = option.text;
             textoDeLaOpcion = option.text;
-            console.log(textoDeLaOpcion);
+            console.log(origen.text, "fue seleccinado y el cambio y el otro select se actualiza a ", destino.text);
         }
     });
 }
