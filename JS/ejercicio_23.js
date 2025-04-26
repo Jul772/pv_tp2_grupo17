@@ -4,7 +4,7 @@ const opcelegida = document.getElementById('opcele');
 radios.forEach(radio => {
     radio.addEventListener('change', () => {
         if (radio.checked) {
-            console.log("El leguaje elegido es", radio.value);
+            console.log("El lenguaje elegido es", radio.value);
             opcelegida.textContent = `Lenguaje seleccionado: ${radio.value}`;
 
         }
