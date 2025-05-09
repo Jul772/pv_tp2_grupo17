@@ -7,16 +7,16 @@
     <title>Ejercicio 9</title>
     <script>
         let nombre = prompt("Por favor, ingresa tu nombre:");
-        if (nombre != null) {
+        if (nombre != "") {
             alert("¡Hola " + nombre + " ,bienvenido a Programación Visual!");
-        } 
+        } else {
+            alert("Ingrese un nombre válido.");
+        }
+        window.location.reload();
     </script>
 </head>
 
 <body style="background-color: #0F0F0F;">
-
-
-
 </body>
 
 </html>

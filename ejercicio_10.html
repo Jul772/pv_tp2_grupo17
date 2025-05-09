@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Promedio</title>
     <script>
-        function calcularPromedio() {
-            
-            let numero1 = parseInt(prompt("Ingresa el primer número entero:"));
-            let numero2 = parseInt(prompt("Ingresa el segundo número entero:"));
-            let numero3 = parseInt(prompt("Ingresa el tercer número entero:"));
-
-            let promedio = (numero1 + numero2 + numero3) / 3;
-
-            
-            alert("El promedio de los tres números es: " + promedio);
+        let num, nums, a;
+        nums, num = 0;
+        for (let i = 1; i <= 3; i++) {
+            num = parseInt(prompt(`Ingrese el numero ${i}`));
+            nums = nums + num;
+            a = i;
         }
-
-        window.onload = calcularPromedio;
+        const promedio = (nums, a) => nums / a;
+        console.log(promedio(nums, a));
+        alert(`El promedio es: ${promedio(nums, a)}`);
+        window.location.reload();
     </script>
 </head>
 

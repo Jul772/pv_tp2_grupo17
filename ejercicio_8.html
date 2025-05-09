@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular Mayor</title>
+    <script>
+        const calcularMayor = (numero1, numero2) => {
+            if (numero1 > numero2) {
+                alert(numero1 + " es mayor que " + numero2);
+            } else if (numero1 < numero2) {
+                alert(numero2 + " es mayor que " + numero1);
+            } else {
+                alert("Ambos números son iguales.");
+            }
+        }
+
+        window.onload = function () {
+            calcularMayor(5, 10);
+            calcularMayor(7, 7);
+            calcularMayor(15, 8);
+        }
+    </script>
     <script src="funcion_ej_8.js"></script>
 </head>
+
 <body>
 </body>
+
 </html>
