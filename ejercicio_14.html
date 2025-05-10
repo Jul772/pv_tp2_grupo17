@@ -5,20 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 14</title>
-    <script>
-        let numduplicar = prompt("Por favor, ingresar números separados por ' , ' (comas):").split(",").map(Number)
-        let resultado = numduplicar.map(function (num) {
-            return num * 2;
-        });
-        let resCad = resultado.join(",")
-        alert("Los números duplicados son: " + resCad);
+    <style>
+        body {
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            color: #f5f6fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        h1 {
+            color: #ff7e5f;
+            font-size: 2.5rem;
+            margin-top: 40px;
+            margin-bottom: 24px;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #2228;
+        }
+
+        div {
+            margin: 24px auto;
+            padding: 32px 24px;
+            border: none;
+            border-radius: 18px;
+            width: 90%;
+            max-width: 500px;
+            background: rgba(34, 36, 38, 0.95);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+            backdrop-filter: blur(4px);
+            transition: box-shadow 0.3s;
+        }
+
+        div:hover {
+            box-shadow: 0 12px 40px 0 rgba(255, 126, 95, 0.25);
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin: 0;
+            color: #f5f6fa;
+            letter-spacing: 1px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            let numduplicar = prompt("Por favor, ingresar números separados por ' , ' (comas):").split(",").map(Number);
+            let duplicar = numduplicar.map(num => num * 2);
+            document.getElementById("nums-duplicados").textContent = duplicar.join(", ");
+        };
     </script>
 </head>
 
-<body style="background-color: #0F0F0F;">
-
-
+<body>
+    <h1>Ejercicio 14</h1>
+    <div>
+        <p>Los números duplicados son: </p>
+        <p id="nums-duplicados"></p>
+    </div>
 
 </body>
 

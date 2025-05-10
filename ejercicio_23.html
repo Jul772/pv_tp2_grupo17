@@ -5,13 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 23</title>
-    <script type="module" src="JS/ejercicio_23.js"></script>
     <style>
         body {
-            background-color: #e6f7ff;
             font-family: Arial, sans-serif;
             margin: 20px;
             text-align: center;
+            background: linear-gradient(to left, #58f770, #aa58ed);
+            background-size: 400%;
+            animation: cambiarColor 2s ease-in alternate infinite;
+        }
+
+        @keyframes cambiarColor {
+            0% {
+                background-position: 25% 50%;
+            }
+
+            100% {
+                background-position: 50% 100%;
+            }
         }
 
         h1 {
@@ -31,13 +42,15 @@
         }
 
         input[type="radio"] {
-            margin-right: 10px;
+            margin: 10px;
+            cursor: pointer;
+
         }
 
         #opcele {
             margin-top: 20px;
             font-size: 1.2em;
-            color: rgba(108, 75, 254, 0.678);
+            color: rgba(0, 0, 0, 0.637);
             text-align: center;
         }
     </style>
@@ -54,6 +67,7 @@
         <input type="radio" id="5" name="lenguaje" value="C++">C++<br>
     </div>
     <h1 id="opcele">Aquí debe ir la opción elegida</h1>
+    <script type="module" src="JS/ejercicio_23.js"></script>
 
 </body>
 

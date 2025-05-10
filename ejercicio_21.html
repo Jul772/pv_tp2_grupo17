@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 21</title>
-    <script type="module" src="JS/ejercicio_21.js"></script> <!-- Enlazamos el JavaScript -->
 
     <style>
         /* Fondo general */
@@ -17,12 +17,14 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #F5F3FF; /* Suave toque lila */
+            background-color: #F5F3FF;
+            /* Suave toque lila */
         }
 
         /* Título principal */
         h1 {
-            color: #4E44A1; /* Morado elegante */
+            color: #4E44A1;
+            /* Morado elegante */
             font-size: 2.5em;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(78, 68, 161, 0.5);
@@ -31,7 +33,8 @@
         /* Contenedor */
         .container {
             text-align: center;
-            background: #FFF9E9; /* Color crema suave */
+            background: #FFF9E9;
+            /* Color crema suave */
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -60,7 +63,8 @@
         }
 
         input[type="text"]:focus {
-            box-shadow: 0 0 10px #B0C4DE; /* Resaltado al enfocar */
+            box-shadow: 0 0 10px #B0C4DE;
+            /* Resaltado al enfocar */
         }
 
         /* Estilo del párrafo */
@@ -80,12 +84,15 @@
         }
     </style>
 </head>
+
 <body>
     <h1> >> Tu texto mágico << </h1>
-    <div class="container">
-        <label for="entradaTexto">Escribe justo abajo:</label>
-        <input type="text" id="entradaTexto" placeholder="ahora me ves, ahora no me ves...">
-        <p id="textoMostrado" class="animado">Aquí aparecerá lo que escribas en el casillero</p>
-    </div>
+            <div class="container">
+                <label for="entradaTexto">Escribe justo abajo:</label>
+                <input type="text" id="entradaTexto" placeholder="ahora me ves, ahora no me ves...">
+                <p id="textoMostrado" class="animado">Aquí aparecerá lo que escribas en el casillero</p>
+            </div>
+            <script type="module" src="JS/ejercicio_21.js"></script>
 </body>
+
 </html>
