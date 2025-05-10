@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Texto </title>
@@ -29,30 +30,19 @@
     }
 
     .largo {
-      background-color: #ffb3b3 !important; /* rojo claro visible */
+      background-color: #ffb3b3 !important;
+      /* rojo claro visible */
     }
   </style>
 </head>
+
 <body>
   <h2>Escribí algo:</h2>
   <input type="text" id="campoTexto" placeholder="Escribí acá...">
   <div id="mostrarTexto">El texto aparecerá aquí</div>
 
-  <script>
-    const input = document.getElementById("campoTexto");
-    const salida = document.getElementById("mostrarTexto");
-
-    input.addEventListener("input", () => {
-      const valor = input.value;
-      salida.textContent = valor;
-
-      if (valor.length > 20) {
-        salida.classList.add("largo");
-      } else {
-        salida.classList.remove("largo");
-      }
-    });
+  <script type="module" src="js/ejercicio_22.js"></script>
   </script>
 </body>
-</html>
 
+</html>

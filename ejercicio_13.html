@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 13</title>
-    <script src="js/ejercicio_13.js" defer></script>
+    <script>
+        //array para los números
+        const numeros = [10, 12, 24, 39, 57, 60, 83, 92];
+
+        //funcion flecha que mostrará cada elemento en una linea separada
+        const mostrarArreglo = (array) => {
+            const resultadoDiv = document.getElementById("resultado"); // con el document... podremos seleccionar el elemento div del archivo html
+            array.forEach(numero => {
+                const elemento = document.createElement("p"); //creamos <p></p> para cada elemento del array
+                elemento.textContent = numero; //se agrega el valor del numero actual 
+                resultadoDiv.appendChild(elemento); //se inserta el parrafo nuevo al div
+            });
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            mostrarArreglo(numeros);
+        });
+    </script>
+    <style>
+        body {
+            background-color: #181818;
+            color: #F5F5F5;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #FF6F3C;
+            font-size: 2.5rem;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #0008;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #F5F5F5;
+        }
+
+        #resultado {
+            margin: 30px auto 0 auto;
+            padding: 30px 20px;
+            border: 2px solid #FF6F3C;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 500px;
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            box-shadow: 0 4px 24px 0 #0006;
+        }
+
+        #resultado p {
+            background: #222;
+            border-radius: 8px;
+            margin: 12px 0;
+            padding: 10px 0;
+            font-size: 1.1rem;
+            color: #FFD6C0;
+            transition: background 0.2s;
+        }
+
+        #resultado p:hover {
+            background: #333;
+            color: #FF6F3C;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Mostrar Arreglo</h1>
     <p>A continuación se imprimirá cada número abajo.</p>
     <div id="resultado"></div>
 </body>
+
 </html>

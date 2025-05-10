@@ -1,23 +1,23 @@
-const paiselect = document.getElementById("pais");
-const capitalselect = document.getElementById("capital");
-let textoDeLaOpcion;
+const selectPais = document.getElementById("pais");
+const selectCapital = document.getElementById("capital");
+let textoOpcion;
 
-function sincronizarSelects(origenSelect, destinoSelect) {
-    const origen = origenSelect.options[origenSelect.selectedIndex];
-    const destino = destinoSelect.options[destinoSelect.selectedIndex];
-    destinoSelect.querySelectorAll('option').forEach(option => {
-        if (option.value == origen.value) {
-            destino.text = option.text;
-            textoDeLaOpcion = option.text;
-            console.log(origen.text, "fue seleccinado y el cambio y el otro select se actualiza a ", destino.text);
+const sincronizarSelects = (selectOrigen, selectDestino) => {
+    const opcionOrigen = selectOrigen.options[selectOrigen.selectedIndex];
+    const opcionDestino = selectDestino.options[selectDestino.selectedIndex];
+    selectDestino.querySelectorAll('option').forEach(opcion => {
+        if (opcion.value == opcionOrigen.value) {
+            opcionDestino.text = opcion.text;
+            textoOpcion = opcion.text;
+            console.log(opcionOrigen.text, "fue seleccionado y el otro select se actualizó a", opcionDestino.text);
         }
     });
-}
+};
 
-paiselect.addEventListener('change', () => {
-    sincronizarSelects(paiselect, capitalselect);
+selectPais.addEventListener('change', () => {
+    sincronizarSelects(selectPais, selectCapital);
 });
 
-capitalselect.addEventListener('change', () => {
-    sincronizarSelects(capitalselect, paiselect);
+selectCapital.addEventListener('change', () => {
+    sincronizarSelects(selectCapital, selectPais);
 });

@@ -5,10 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 15</title>
-    <script src="JS/ejercicio_15.js" defer></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f4f6fb 100%);
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-top: 48px;
+            color: #234567;
+            letter-spacing: 1.5px;
+            font-size: 2.2rem;
+            text-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+        }
+
+        .container {
+            background: #fff;
+            padding: 36px 28px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+            margin-top: 36px;
+            min-width: 340px;
+            max-width: 90vw;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 40px rgba(44, 62, 80, 0.18);
+        }
+
+        p {
+            margin-top: 28px;
+            font-size: 1.18rem;
+            color: #1e3550;
+            min-height: 1.5em;
+            letter-spacing: 0.2px;
+        }
+
+        strong {
+            color: #2a7ae4;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+    <script>
+        const meses = [
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+            "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        ];
+
+        const retornarMes = (numero) => {
+            if (numero >= 1 && numero <= 12) {
+                return `El mes correspondiente al número ${numero} es: <strong>${meses[numero - 1]}</strong>.`;
+            } else {
+                return "El número ingresado no es válido o no corresponde a un mes.";
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const resultado = document.getElementById('resultado');
+            let numeroIngresado = parseInt(prompt("Ingresa un número del 1 al 12:"));
+            if (!isNaN(numeroIngresado)) {
+                resultado.innerHTML = retornarMes(numeroIngresado);
+            } else {
+                resultado.textContent = "Intente ingresando un número válido.";
+            }
+        });
+    </script>
 </head>
+
 <body>
     <h1>¿Qué mes es?</h1>
-    <p>Ingresa un n° del 1 al 12 y te diré a cual representa.</p>
+    <div class="container">
+        <p id="resultado"></p>
+    </div>
 </body>
+
 </html>

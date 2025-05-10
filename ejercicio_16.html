@@ -5,24 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 16</title>
-    <script>
-        function sumarRango() {
-            let numI = parseInt(prompt("Ingrese el numero inicial:"));
-            let numF = parseInt(prompt("Ingrese el numero final:"));
-            let suma = 0;
-            for (let i = numI; i <= numF; i++) {
-                suma += i;
-            }
-            alert("La suma de los números entre " + numI + " y " + numF + " es: " + suma);
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f4f6fb 100%);
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
-        sumarRango();
+
+        h1 {
+            margin-top: 48px;
+            color: #234567;
+            letter-spacing: 1.5px;
+            font-size: 2.2rem;
+            text-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+        }
+
+        .container {
+            background: #fff;
+            padding: 36px 28px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+            margin-top: 36px;
+            min-width: 340px;
+            max-width: 90vw;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 28px;
+            font-size: 1.18rem;
+            color: #1e3550;
+        }
+    </style>
+    <script>
+        let numI = parseInt(prompt("Ingrese el numero inicial:"));
+        let numF = parseInt(prompt("Ingrese el numero final:"));
+        let suma = (numI, numF) => {
+            let total = 0;
+            for (let i = numI; i <= numF; i++) {
+                total = total + i;
+            }
+            return total;
+        }
+        window.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("numI").textContent = numI;
+            document.getElementById("numF").textContent = numF;
+            document.getElementById("resultado").textContent = suma(numI, numF);
+        });
     </script>
 </head>
 
-<body style="background-color: #0F0F0F;">
+<body>
 
-
-
+    <h1>Ejercicio 16</h1>
+    <div class="container">
+        <p>La suma de los números entre <strong id="numI"></strong> y <strong id="numF"></strong> es: <strong
+                id="resultado"></strong></p>
+    </div>
 </body>
 
 </html>

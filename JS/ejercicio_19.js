@@ -12,14 +12,16 @@ const mostrarDatos = () => {
     }
 
     //mensaje de salida
-    const mensaje = `
+    const mensaje = (nombre, apellido, libreta) => {
+        return `
         Los datos ingresados son:
         Nombre: ${nombre}
         Apellido: ${apellido}
         Libreta Universitaria: ${libreta}
     `;
+    }
 
-    alert(mensaje.trim());
+    alert(mensaje(nombre, apellido, libreta));
 };
 
 export { mostrarDatos };

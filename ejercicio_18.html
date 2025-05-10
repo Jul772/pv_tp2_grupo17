@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Ejercicio 18 sin módulos</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f0f0f0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 32px;
+      background: linear-gradient(120deg, #f0f0f0 60%, #e0ffe8 100%);
+      min-height: 100vh;
+      color: #222;
+    }
+
+    h1 {
+      color: #218838;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
     }
 
     #miParrafo {
+      background: #fff;
       color: #333;
-      font-size: 1.2em;
-      margin-bottom: 10px;
+      font-size: 1.15em;
+      margin-bottom: 18px;
+      padding: 18px 22px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(40, 167, 69, 0.08);
+      line-height: 1.6;
+      transition: box-shadow 0.2s;
     }
 
     #miBoton {
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: white;
+      padding: 12px 28px;
+      background: linear-gradient(90deg, #28a745 70%, #34d058 100%);
+      color: #fff;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      font-size: 1em;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(40, 167, 69, 0.10);
+      transition: background 0.2s, transform 0.1s;
     }
 
     #miBoton:hover {
-      background-color: #218838;
+      background: linear-gradient(90deg, #218838 70%, #28a745 100%);
+      transform: translateY(-2px) scale(1.03);
     }
   </style>
 </head>
+
 <body>
-  <h2>Ejercicio 18</h2>
-  <p id="miParrafo">¿Cómo se accede al DOM?
-    En Javascript, la forma de acceder al DOM es a través de un objeto llamado document, que representa el árbol DOM de la página o pestaña del navegador donde nos encontramos. En su interior pueden existir varios tipos de elementos, pero principalmente serán element o node:
-    
-    element no es más que la representación genérica de una etiqueta: HTMLElement.
-    node es una unidad más básica, la cuál puede ser element o un nodo de texto.
-    document y window (padre de document) son objetos cuya interfaces son generalmente muy usadas en la programación de DOM. En término simple, el objeto window representa algo como podría ser el navegador, y el objeto document es la raíz del documento en sí. Element hereda de la interfaz genérica Node, y juntos, estas dos interfaces proporcionan muchos métodos y propiedades utilizables sobre los elementos individuales. Éstos elementos pueden igualmente tener interfaces específicas según el tipo de datos representados. Lo siguiente es una breve lista de los APIS comunes en la web y en las páginas escritas en XML utilizando el DOM, no es completa ni descriptiva.</p>
+  <h1>Ejercicio 18</h1>
+  <p id="miParrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quae quibusdam obcaecati. Odit rem
+    porro, iste ab a aperiam eos perferendis! Tempora consequatur maxime deserunt consequuntur explicabo, suscipit
+    facilis cupiditate quaerat blanditiis maiores natus, harum consectetur cum voluptates beatae provident, voluptatem
+    tenetur itaque sint cumque unde amet. Maiores consequatur nam eveniet eum alias aperiam nisi incidunt quasi illo ex
+    labore mollitia, deserunt nostrum ipsa qui error culpa. Modi possimus, officiis esse dolorem asperiores adipisci
+    nesciunt, necessitatibus temporibus fuga quae provident. Sapiente ea repudiandae optio, recusandae fugiat omnis id
+    vitae, iste saepe dolorum illum. Excepturi aliquid aperiam voluptatibus! A, inventore id?</p>
   <button id="miBoton">Cambiar texto</button>
 
-  <script src="ejecicio_18.js"></script>
+  <script type="module" src="js/ejercicio_18.js"></script>
 </body>
+
 </html>

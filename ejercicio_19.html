@@ -5,8 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Ejercicio 19</title>
-    <script type="module" src="JS/ejercicio_19.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #e0eafc, #cfdef3);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d3a4b;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        form {
+            background: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 32px 28px 24px 28px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 800;
+            color: #34495e;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px 12px;
+            border: 1.5px solid #b2bec3;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+            background: #f7fafd;
+            margin-bottom: 8px;
+        }
+
+
+
+        button {
+            background: linear-gradient(90deg, #6c63ff 60%, #48c6ef 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(76, 110, 245, 0.08);
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #48c6ef 0%, #6c63ff 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+    </style>
 </head>
+
 <body>
     <h1>Formulario de Datos</h1>
     <form>
@@ -24,5 +91,7 @@
 
         <button type="button" id="botonMostrar"> Mostrar Datos Ingresado</button>
     </form>
+    <script type="module" src="JS/ejercicio_19.js"></script>
 </body>
+
 </html>
